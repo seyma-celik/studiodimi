@@ -165,4 +165,71 @@ div[style*="overflow-x: auto"] { scrollbar-width: none; }
 @keyframes zoomla {
     from {transform: scale(0.7)} 
     to {transform: scale(1)}
+
+}
+/* --- YENİ GALERİ TASARIMI --- */
+.urun-galerisi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Yan yana dizer, ekrana sığdırır */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.urun-karti {
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer; /* Fareyle üzerine gelince el işareti çıkar */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Hover efekti için yumuşaklık */
+}
+
+.urun-karti:hover {
+    transform: translateY(-10px); /* Üzerine gelince resmi hafif yukarı kaldırır */
+}
+
+.urun-karti img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Resimleri orantılı kesip sığdırır */
+    display: block;
+}
+
+/* --- TIKLANINCA BÜYÜYEN RESİM (MODAL) EKRANI --- */
+.modal {
+    display: none; /* Başlangıçta gizli */
+    position: fixed; 
+    z-index: 1000; /* Her şeyin üstünde çıkar */
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.9); /* Yarı saydam siyah arka plan */
+}
+
+.modal-icerik {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.kapat {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.kapat:hover,
+.kapat:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
