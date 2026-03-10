@@ -1,0 +1,168 @@
+/* =========================================
+   1. GENEL AYARLAR (Temel Yazı Tipi ve Renkler)
+========================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfaf6; 
+    color: #4a3f35; 
+}
+
+/* =========================================
+   2. MENÜ VE LOGO ALANI
+========================================= */
+.ust-kisim {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+/* --- YENİ EKLENEN YUVARLAK LOGO VE METİN AYARLARI --- */
+.logo a {
+    display: flex;
+    align-items: center; /* Resmi ve yazıyı dikeyde tam ortalar */
+    gap: 15px; /* Resim ile yazı arasındaki boşluk */
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Kare resmi kusursuz bir yuvarlağa çevirir */
+    object-fit: cover; /* Resmin sündürülmesini engeller */
+    transition: transform 0.3s ease;
+    border: 2px solid #D35400; /* Logoya ince şık bir çerçeve (isteğe bağlı) */
+}
+
+.logo-metin {
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #D35400;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.logo a:hover .logo-img {
+    transform: scale(1.05); /* Üzerine gelince logo hafif büyür */
+}
+
+/* --- MENÜ LİNKLERİ --- */
+.menu a {
+    text-decoration: none;
+    color: #4a3f35;
+    margin-left: 30px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.menu a:hover { 
+    color: #D35400; 
+}
+
+/* =========================================
+   3. BAŞLIKLAR VE BUTONLAR
+========================================= */
+section h3, .kategori-baslik {
+    font-size: 32px;
+    color: #D35400;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.buton-birincil, .buton-ikincil {
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.buton-birincil {
+    background-color: #D35400;
+    color: white;
+    border: 2px solid #D35400;
+}
+.buton-birincil:hover {
+    background-color: transparent;
+    color: #D35400;
+}
+
+.buton-ikincil {
+    background-color: transparent;
+    color: #D35400;
+    border: 2px solid #D35400;
+}
+.buton-ikincil:hover {
+    background-color: #D35400;
+    color: white;
+}
+
+/* =========================================
+   4. ÜRÜN KARTLARI (Kusursuz Boyutlandırma)
+========================================= */
+.urun-karti {
+    display: flex;
+    flex-direction: column;
+    background: #fff; 
+    border-radius: 20px;
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.urun-karti:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.urun-karti img {
+    width: 100% !important;
+    height: 280px !important; 
+    object-fit: cover !important; 
+    display: block; 
+    border-radius: 20px 20px 0 0 !important; 
+}
+
+.urun-karti h4 { margin: 15px 15px 5px 15px; font-size: 20px; text-align: center; }
+.urun-karti p { margin: 0 15px 15px 15px; color: #D35400; font-weight: 500; text-align: center; }
+
+/* Scroll Çubuğunu Gizleme */
+div[style*="overflow-x: auto"]::-webkit-scrollbar { display: none; }
+div[style*="overflow-x: auto"] { scrollbar-width: none; }
+
+/* =========================================
+   5. BÜYÜK RESİM PENCERESİ (MODAL)
+========================================= */
+#resimModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    align-items: center; justify-content: center;
+    cursor: zoom-out;
+}
+
+#modalResmi {
+    max-width: 90%; max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    animation: zoomla 0.3s;
+}
+
+@keyframes zoomla {
+    from {transform: scale(0.7)} 
+    to {transform: scale(1)}
+}

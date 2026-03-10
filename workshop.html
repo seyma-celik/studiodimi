@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDİO DİMİ</title>
+    <meta name="description" content="studio dimi handmade art with soul">
+    <meta name="keywords" content="studio, dimi, handmade, seramik, atölye, workshop">
+<link rel="stylesheet" href="style.css">     
+</head>
+<body>
+    <header class="ust-kisim"> 
+        <div class="logo">
+            <h1>Studio Dimi</h1>
+        </div>
+<nav class="menu">
+    <a href="index.html">Anasayfa</a>
+        <a href="koleksiyon.html">Koleksiyon</a>
+        <a href="workshop.html">Workshop</a>
+        <a href="hikayemiz.html">Hikayemiz</a>
+        <a href="iletisim.html">İletişim</a>
+    </nav></header>
+<main style="padding: 60px 20px; text-align: center;">
+
+    <h2 style="font-size: 42px; color: #D35400; margin-bottom: 20px;">Birlikte Üretelim</h2>
+    <p style="font-size: 18px; color: #666; max-width: 600px; margin: 0 auto 50px auto;">
+        Hiçbir tecrübeye ihtiyacınız yok. Gündelik hayatın telaşına mola verip, kahvelerimiz eşliğinde kendi ellerinizle üretmenin keyfini çıkarın.
+    </p>
+
+    <h3 class="kategori-baslik">Yaklaşan Atölyeler</h3>
+    <div class="takvim-listesi">
+        
+        <div class="takvim-karti">
+            <div class="takvim-tarih">15<span>Ekim Cmt</span></div>
+            <div class="takvim-detay">
+                <h4>Seramik Şekillendirme: Kendi Fincanını Yap</h4>
+                <p>Saat: 14:00 - 17:00 | Kontenjan: 6 Kişi</p>
+            </div>
+            <a href="iletisim.html" class="buton buton-birincil" style="padding: 10px 20px; font-size: 14px;">Kayıt Ol</a>
+        </div>
+
+        <div class="takvim-karti">
+            <div class="takvim-tarih">22<span>Ekim Cmt</span></div>
+            <div class="takvim-detay">
+                <h4>Yeni Başlayanlar İçin Punch Nakışı</h4>
+                <p>Saat: 13:00 - 16:00 | Kontenjan: 8 Kişi</p>
+            </div>
+            <a href="iletisim.html" class="buton buton-birincil" style="padding: 10px 20px; font-size: 14px;">Kayıt Ol</a>
+        </div>
+
+    </div>
+
+    <h3 class="kategori-baslik">Atölyeden Kareler</h3>
+    <p style="color: #666; margin-bottom: 40px;">Büyütmek için fotoğrafların üzerine tıklayın.</p>
+    
+    <div class="urun-galerisi">
+        <div class="urun-karti">
+            <img src="image/seramikyapim.jpg" alt="Atölye çalışmasından seramik yapan eller">
+        </div>
+        <div class="urun-karti">
+            <img src="image/punchworkshop.jpg" alt="Punch nakışı yapan katılımcılar">
+        </div>
+        <div class="urun-karti">
+            <img src="image/seramikworkshop.jpg" alt="seramik Workshop">
+        </div>
+         <div class="urun-karti">
+            <img src="image/atolyeürün.jpg" alt="Atölyemiz">
+        </div>
+    <div class="urun-karti">
+            <img src="image/punchmalzeme.jpg" alt="Punch Atölyemiz">
+        </div>
+         <div class="urun-karti">
+            <img src="image/workshop.jpg" alt="Çalışmalarımız">
+        </div>
+    </div>
+ 
+</main>
+   <div id="resimModal" onclick="this.style.display='none'">
+    <img id="modalResmi">
+</div>
+<script>
+    const urunResimleri = document.querySelectorAll('.urun-karti img');
+    const modal = document.getElementById('resimModal');
+    const modalImg = document.getElementById('modalResmi');
+
+    urunResimleri.forEach(resim => {
+        resim.onclick = function() {
+            modal.style.display = "flex"; 
+            modalImg.src = this.src;
+        }
+    });
+</script>
+</body>
+</html>

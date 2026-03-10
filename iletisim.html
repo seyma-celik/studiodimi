@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Studio Dimi</title>
+    <link rel="stylesheet" href="style.css">       
+</head>
+<body>
+    <header class="ust-kisim"> 
+        <div class="logo">
+            <h1>Studio Dimi</h1>
+        </div>
+        <nav class="menu">
+            <a href="index.html">Anasayfa</a>
+            <a href="koleksiyon.html">Koleksiyon</a>
+            <a href="workshop.html">Workshop</a>
+            <a href="hikayemiz.html">Hikayemiz</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+    </header>
+
+    <main style="padding: 60px 20px; max-width: 1000px; margin: 0 auto;">
+        
+        <h2 style="font-size: 42px; color: #D35400; text-align: center; margin-bottom: 20px;">Bize Ulaşın</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 50px;">Workshop kayıtları, özel siparişler veya sadece merhaba demek için formu doldurabilirsiniz.</p>
+
+       <div class="iletisim-alani">
+            
+            <div class="iletisim-bilgileri">
+                <h3>Atölye Adresi</h3>
+                <p>📍 Alsancak, İzmir, Türkiye</p>
+                <p>📞 +90 555 0000000</p>
+                <p>✉️ merhaba@studiodimi.com</p>
+                
+                <h3 style="margin-top: 30px;">Sosyal Medya</h3>
+                <p>Instagram: @studio.dimi</p>
+            </div>
+
+            <form class="iletisim-formu">
+                <div style="width: 100%;">
+                    <input type="text" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div style="width: 100%;">
+                    <input type="email" placeholder="E-posta Adresiniz" required>
+                </div>
+                <div style="width: 100%;">
+                    <select required>
+                        <option value="" disabled selected>Konu Seçiniz</option>
+                        <option value="workshop">Workshop Kayıt</option>
+                        <option value="siparis">Özel Sipariş</option>
+                    </select>
+                </div>
+                <div style="width: 100%;">
+                    <textarea rows="5" placeholder="Mesajınız..." required></textarea>
+                </div>
+                
+                <button type="submit" class="buton buton-birincil" style="width: 100%; border: none;">Gönder</button>
+            </form>
+
+        </div>
+    </main>
+</body>
+</html>

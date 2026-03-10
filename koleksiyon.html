@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDİO DİMİ</title>
+    <meta name="description" content="studio dimi handmade art with soul">
+    <meta name="keywords" content="studio, dimi, handmade, seramik, atölye, workshop">
+<link rel="stylesheet" href="style.css">       
+</head>
+<body>
+    <header class="ust-kisim"> 
+        <div class="logo">
+            <h1>Studio Dimi</h1>
+        </div>
+<nav class="menu">
+    <a href="index.html">Anasayfa</a>
+        <a href="koleksiyon.html">Koleksiyon</a>
+        <a href="Workshop.html">Workshop</a>
+        <a href="hikayemiz.html">Hikayemiz</a>
+        <a href="iletisim.html">İletişim</a>
+    </nav></header>
+<main style="text-align: center;">
+    
+    <h2 class="kategori-baslik">Seramik Koleksiyonu</h2>
+    
+    <div class="urun-galerisi">
+        <div class="urun-karti">
+            <img src="image/kupa.jpg" alt="Seramik Fincan">
+            <h4>Seramik Kupa</h4>
+            <p>180₺</p>
+        </div>
+        
+        <div class="urun-karti">
+            <img src="image/vazo.jpg" alt="Modern Vazo">
+            <h4>Modern Vazo</h4>
+            <p>450₺</p>
+        </div>
+
+        </div>
+
+    <h2 class="kategori-baslik">Punch & Tekstil</h2>
+    
+    <div class="urun-galerisi">
+        <div class="urun-karti">
+            <img src="image/mantarcalisma.jpg" alt="Mantar Bahçesi Pano">
+            <h4>Mantar Bahçesi Pano</h4>
+            <p>320₺</p>
+        </div>
+
+        <div class="urun-karti">
+            <img src="image/mantarpunch.jpg" alt="Punch Tablo">
+            <h4>Punch Mantar Tablo</h4>
+            <p>85₺</p>
+        </div>
+    </div>
+
+</main>
+<div id="resimModal" onclick="this.style.display='none'">
+    <img id="modalResmi">
+</div>
+  <script>
+    const urunResimleri = document.querySelectorAll('.urun-karti img');
+    const modal = document.getElementById('resimModal');
+    const modalImg = document.getElementById('modalResmi');
+
+    urunResimleri.forEach(resim => {
+        resim.onclick = function() {
+            modal.style.display = "flex"; 
+            modalImg.src = this.src;
+        }
+    });
+</script>
+</body>
+</html>
